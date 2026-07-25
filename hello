@@ -1,3 +1,23 @@
-echo "hello"
+#!/usr/bin/env python3
 
-printf "hello"
+# 四則演算を行う簡単なPythonコード
+
+def calculate(a, b, op):
+    if op == '+':
+        return a + b
+    elif op == '-':
+        return a - b
+    elif op == '*':
+        return a * b
+    elif op == '/':
+        return a / b
+    else:
+        raise ValueError('不明な演算子です。')
+
+if __name__ == '__main__':
+    x = 10
+    y = 5
+    print(f"{x} + {y} = {calculate(x, y, '+')}")
+    print(f"{x} - {y} = {calculate(x, y, '-')}")
+    print(f"{x} * {y} = {calculate(x, y, '*')}")
+    print(f"{x} / {y} = {calculate(x, y, '/')}")
